@@ -13,38 +13,7 @@
 
 // const titleCased = () => {
 //   return tutorials
-// }
-// const tutorials = [
-//   "what does the this keyword mean?",
-//   "What is the Constructor OO pattern?",
-//   "implementing Blockchain Web API",
-//   "The Test Driven Development Workflow",
-//   "What is NaN and how Can we Check for it",
-//   "What is the difference between stopPropagation and preventDefault?",
-//   "Immutable State and Pure Functions",
-//   "what is the difference between == and ===?",
-//   "what is the difference between event capturing and bubbling?",
-//   "what is JSONP?",
-// ];
-
-// function titleCased(str) {
-//   if (typeof str !== 'string') return ''; // Ensure the input is a string
-
-//   return str
-//     .split(' ')
-//     .map((word, index) => {
-//       if (index === 0 || word.length > 3) {
-//         return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
-//       }
-//       return word.toLowerCase();
-//     })
-//     .join(' ');
-// }
-
-// const titleCasedTutorials = tutorials.map(titleCased); // Applying titleCased to each element in the array
-
-// console.log(titleCasedTutorials);
-
+// } 
 
 const tutorials = [
   "What Does The This Keyword Mean?",
@@ -64,11 +33,11 @@ function titleCased() {
     str
       .split(' ')
       .map(word => {
-        // Handle specific exceptions
+        
         if (["NaN", "JSONP?", "StopPropagation", "PreventDefault?", "OO", "API"].includes(word)) {
-          return word; // Retain the word as-is
+          return word; 
         }
-        // Title-case all other words
+
         return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
       })
       .join(' ')
@@ -79,5 +48,5 @@ module.exports = titleCased;
 
 
 module.exports = titleCased;
-// Ensure the function is exported for the test
+
 
